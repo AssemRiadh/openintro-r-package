@@ -1,0 +1,26 @@
+url: https://www.openintro.org
+
+home:
+  strip_header: true
+
+  links:
+  - text: Learn more
+    href: https://www.openintro.org
+
+reference:
+- title: Datasets
+  contents:
+  - birds
+  - esi
+  - ipo
+  - london_boroughs
+  - london_murders
+  - military
+  - piracy
+  - sp500
+  - state_stats
+  - teacher
+  - ukdemo
+
+- title: Functions
+  contents:
