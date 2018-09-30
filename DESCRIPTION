@@ -1,0 +1,36 @@
+Package: openintro
+Version: 2.0.1
+Title: Data Sets and Supplemental Functions from 'OpenIntro' Textbooks and Labs
+Description: Supplemental functions and data for 'OpenIntro' resources, which 
+    includes open-source textbooks and resources for introductory statistics at 
+    openintro.org. The package contains data sets used in our open-source textbooks 
+    along with custom plotting functions for reproducing book figures. Note that 
+    many functions and examples include color transparency; some plotting elements 
+    may not show up properly (or at all) when run in some versions of Windows 
+    operating system.
+Authors@R: c(
+    person("Mine", "\u00C7etinkaya-Rundel", email = "mine@rstudio.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-6452-2420")),
+    person("David", "Diez", email = "david.m.diez@gmail.com", role = c("aut")),
+    person("Andrew", "Bray", email = "abray@reed.edu", role = c("aut")),
+    person("Christopher", "Barr", role = c("aut"))
+    )
+License: GPL-3
+Encoding: UTF-8
+LazyLoad: yes
+LazyData: yes
+URL: http://www.openintro.org/
+BugReports: https://github.com/OpenIntroStat/openintro-r-package/issues
+ByteCompile: true
+Depends: 
+  graphics, 
+  grDevices, 
+  stats,
+  utils,
+  R (>= 2.10)
+Suggests:
+  dplyr,
+  forcats,
+  lubridate,
+  ggplot2,
+  tidyr
+RoxygenNote: 6.0.1.9000
