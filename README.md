@@ -1,53 +1,26 @@
 # `openintro` package
 
+Supplemental functions and data for 'OpenIntro' resources, which includes 
+open-source textbooks and resources for introductory statistics at 
+[openintro.org](https://www.openintro.org/). The package contains data sets used 
+in our open-source textbooks along with custom plotting functions for reproducing 
+book figures. Note that many functions and examples include color transparency; 
+some plotting elements may not show up properly (or at all) when run in some 
+versions of Windows operating system.
+
+## Installation
+
 To install the `openintro` package:
 
 ``` r
 # install.packages("devtools")
 library(devtools)
-install_github("OpenIntroStat/openintro-r-package", subdir = "openintro")
+install_github("OpenIntroStat/openintro-r-package")
 ```
 
 This package was produced as part of the OpenIntro project. For the accompanying textbook, visit openintro.org. A PDF of the textbook is free and paperbacks can be purchased online (royalty-free).
 
+## Contributing
 
-# `OIdata` package
-
-To install the `OIdata` package:
-
-``` r
-# install.packages("devtools")
-library(devtools)
-install_github("OpenIntroStat/openintro-r-package", subdir = "OIdata")
-```
-
-This package contains additional data sets beyond those included in the `openintro` package.
-
-
-# `OIsurv` package
-
-To install the `OIsurv` package:
-
-``` r
-# install.packages("devtools")
-library(devtools)
-install_github("OpenIntroStat/openintro-r-package", subdir = "OIsurv")
-```
-
-This package was produced for the [Survival Analysis in R guide](https://www.openintro.org/redirect.php?go=openintro_survival&referrer=GitHub_Package_ReadMe).
-
-
-# `stockPortfolio` package
-
-To install the `stockPortfolio` package:
-
-``` r
-# install.packages("devtools")
-library(devtools)
-install_github("OpenIntroStat/openintro-r-package", subdir = "stockPortfolio")
-```
-
-## Disclaimer for `stockPortfolio` package
-
-Use the `stockPortfolio` package as a tool for making investments at
-your own risk. There is no guarantee of implementation accuracy or the usefulness of the methods for actual investments.
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). 
+By participating in this project you agree to abide by its terms.
