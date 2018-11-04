@@ -1,3 +1,52 @@
+#' Histogram or hollow histogram
+#' 
+#' Create histograms and hollow histograms. This function permits easy color
+#' and appearance customization.
+#' 
+#' 
+#' @param x Numerical vector or a frequency table (matrix) where the first
+#' column represents the observed values and the second column the frequencies.
+#' See also \code{freqTable} argument.
+#' @param col Shading of the histogram bins.
+#' @param border Color of histogram bin borders.
+#' @param breaks A vector for the bin boundaries or an approximate number of
+#' bins.
+#' @param probability If \code{FALSE}, the frequency is plotted. If
+#' \code{TRUE}, then a probability density.
+#' @param hollow If \code{TRUE}, a hollow histogram will be created.
+#' @param add If \code{TRUE}, the histogram is added to the plot.
+#' @param lty Line type. Applies only if \code{hollow=TRUE}.
+#' @param lwd Line width. Applies only if \code{hollow=TRUE}.
+#' @param freqTable Set to \code{TRUE} if \code{x} is a frequency table.
+#' @param right Set to \code{FALSE} to assign values of \code{x} that fall on a
+#' bin margin to the left bin. Otherwise the ties default to the right bin.
+#' @param axes If \code{FALSE}, the axes are not plotted.
+#' @param xlab Label for the x axis.
+#' @param ylab Label for the y axis.
+#' @param xlim Limits for the x axis.
+#' @param ylim Limits for the y axis.
+#' @param \dots Additional arguments to \code{plot}. If \code{add} is
+#' \code{TRUE}, these arguments are ignored.
+#' @author David Diez
+#' @seealso \code{\link{boxPlot}}, \code{\link{dotPlot}},
+#' \code{\link{densityPlot}}
+#' @examples
+#' 
+#' data(run10)
+#' par(mfrow=c(2,2))
+#' histPlot(run10$time)
+#' histPlot(run10$time[run10$gender=='M'], probability=TRUE, xlim=c(30, 180),
+#' 	ylim=c(0, 0.025), hollow=TRUE)
+#' histPlot(run10$time[run10$gender=='F'], probability=TRUE, add=TRUE,
+#' 	hollow=TRUE, lty=3, border='red')
+#' legend('topleft', col=c('black', 'red'), lty=2:3, legend=c('M','F'))
+#' histPlot(run10$time, col=fadeColor('yellow', '33'), border='darkblue',
+#' 	probability=TRUE, breaks=30, lwd=3)
+#' brks <- c(40, 50, 60, 65, 70, 75, 80, seq(82.5, 120, 2.5), 125,
+#' 	130, 135, 140, 150, 160, 180)
+#' histPlot(run10$time, probability=TRUE, breaks=brks,
+#' 	col=fadeColor('darkgoldenrod4', '33'))
+#' 
 histPlot <- function(x,
                      col = fadeColor('black', '22'),
                      border = 'black',

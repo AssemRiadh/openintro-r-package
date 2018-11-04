@@ -1,5 +1,30 @@
 #source("http://www.stat.ucla.edu/~cocteau/stat13/data/cdc.R")
 
+
+
+#' Exploratory data analysis plot
+#' 
+#' Explore different plotting methods using a click interface.
+#' 
+#' 
+#' @aliases edaPlot createEdaOptions guessMethod plotNothing fitNormal
+#' makePlotIcon
+#' @param dataFrame A data frame.
+#' @param Col A vector containing six colors. The colors may be given in any
+#' form.
+#' @author David Diez
+#' @seealso \code{\link{histPlot}}, \code{\link{densityPlot}},
+#' \code{\link{boxPlot}}, \code{\link{dotPlot}}
+#' @examples
+#' 
+#' data(mlbBat10)
+#' bat <- mlbBat10[mlbBat10$AB > 200,]
+#' #edaPlot(bat)
+#' 
+#' data(marioKart)
+#' mk <- marioKart[marioKart$totalPr < 100,]
+#' #edaPlot(mk)
+#' 
 edaPlot <- function(dataFrame,
                     Col=c('#888888', '#FF0000', '#222222',
                           '#FFFFFF', '#CCCCCC', '#3377AA')) {

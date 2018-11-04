@@ -1,3 +1,25 @@
+#' Plot data and add a regression line
+#' 
+#' Plot data and add a regression line.
+#' 
+#' 
+#' @param x Predictor variable.
+#' @param y Outcome variable.
+#' @param xlab x-axis label.
+#' @param ylab y-axis label.
+#' @param col Color of points.
+#' @param cex Size of points.
+#' @param pch Plotting character.
+#' @param n The preferred number of axis labels.
+#' @param nMax The maximum number of axis labels.
+#' @param yR y-limit buffer factor.
+#' @param axes Boolean to indicate whether or not to include axes.
+#' @param \dots Passed to \code{plot}.
+#' @seealso \code{\link{makeTube}}
+#' @examples
+#' 
+#' PlotWLine(1:10, seq(-5, -2, length.out = 10) + rnorm(10))
+#' 
 PlotWLine <- function(x, y,
                       xlab = '',
                       ylab = '',

@@ -1,3 +1,59 @@
+#' Linear regression plot with residual plot
+#' 
+#' Plot data, the linear model, and a residual plot simultaneously.
+#' 
+#' 
+#' @param x The x coordinates of points in the plot.
+#' @param y The y coordinates of points in the plot.
+#' @param xAxis The maximum number of x axis labels.
+#' @param yAxis The maximum number of y axis labels.
+#' @param resAxis The maximum number of y axis labels in the residual plot.
+#' @param resSymm Boolean determining whether the range of the residual plot
+#' should be symmetric about zero.
+#' @param wBox Boolean determining whether a box should be added around each
+#' plot.
+#' @param wLine Boolean determining whether to add a regression line to the
+#' plot.
+#' @param lCol The color of the regression line to be added.
+#' @param lty The line type of the regression line to be added.
+#' @param lwd The line width of the regression line to be added.
+#' @param xlab A label for the x axis.
+#' @param ylab A label for the y axis
+#' @param marRes Margin specified for the residuals.
+#' @param col Color of points.
+#' @param pch Plotting character.
+#' @param cex Plotting character size.
+#' @param xR Scaling the limits of the x axis. Ignored if \code{xlim}
+#' specified.
+#' @param yR Scaling the limits of the y axis. Ignored if \code{ylim}
+#' specified.
+#' @param xlim Limits for the x axis.
+#' @param ylim Limits for the y axis.
+#' @param subset A subset of the data to be used for the linear model.
+#' @param parCustom If \code{TRUE}, then the plotting margins are not modified
+#' automatically. This value should also be \code{TRUE} if the plots are being
+#' placed within a plot of multiple panels.
+#' @param myHeight A numerical vector of length 2 representing the ratio of the
+#' primary plot to the residual plot, in height.
+#' @param plots Not currently utilized.
+#' @param highlight Numerical vector specifying particular points to highlight.
+#' @param hlCol Color of highlighted points.
+#' @param hlCex Size of highlighted points.
+#' @param hlPch Plotting characters of highlighted points.
+#' @param na.rm Remove cases with \code{NA} values.
+#' @param \dots Additional arguments to \code{plot}.
+#' @author David M Diez <david.m.diez@@gmail.com>
+#' @seealso \code{\link{makeTube}}
+#' @keywords linear model residuals
+#' @examples
+#' 
+#' data(satGPA)
+#' lmPlot(satGPA$SATSum, satGPA$FYGPA)
+#' 
+#' data(gradesTV)
+#' lmPlot(gradesTV$TV, gradesTV$Grades, xAxis=4,
+#' 	xlab='time watching TV', yR=0.2, highlight=c(1,15,20))
+#' 
 lmPlot <- function(x, y,
                    xAxis = 0,
                    yAxis = 4,

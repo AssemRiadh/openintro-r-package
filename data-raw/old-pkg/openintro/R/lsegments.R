@@ -1,3 +1,36 @@
+#' Create a Line Segment Plot
+#' 
+#' Creae a simple plot showing a line segment.
+#' 
+#' 
+#' @param x The endpoints of the interval. Values larger (smaller) than 999
+#' (-999) will be interpreted as (negative) infinity.
+#' @param l Indicate whether the left end point should be open (\code{"o"}) or
+#' closed (\code{"c"}).
+#' @param r Indicate whether the right end point should be open (\code{"o"}) or
+#' closed (\code{"c"}).
+#' @param ticks Indicate whether to show tick marks (\code{TRUE}) or not
+#' (\code{FALSE}).
+#' @param labs The position for the point labels. Set to \code{0} if no labels
+#' should be shown.
+#' @param add Indicate whether the line segment should be added to an existing
+#' plot (\code{TRUE}) or a new plot should be created (\code{FALSE}).
+#' @param ylim A vector of length 2 specifying the vertical plotting limits,
+#' which may be useful for fine-tuning plots. The default is
+#' \code{c(-0.75,0.25)}.
+#' @author David Diez
+#' @seealso \code{\link{dlsegments}}, \code{\link{CCP}},
+#' \code{\link{ArrowLines}}
+#' @references OpenIntro, \href{http://www.openintro.org/algeopenintro.org}
+#' @keywords Line Segment Algebra
+#' @examples
+#' 
+#' lsegments(c(2,7), "o", "c", ylim=c(-0.3, 0.2))
+#' 
+#' lsegments(c(5,7), "c", "c", ylim=c(-0.3, 0.2))
+#' 
+#' lsegments(c(4,1000), "o", "o", ylim=c(-0.3, 0.2))
+#' 
 lsegments <- function(x = c(3, 7),
                       l = "o",
                       r = "c",

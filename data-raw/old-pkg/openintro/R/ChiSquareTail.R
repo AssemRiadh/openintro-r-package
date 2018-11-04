@@ -1,4 +1,25 @@
-
+#' Plot upper tail in chi-square distribution
+#' 
+#' Plot a chi-square distribution and shade the upper tail.
+#' 
+#' 
+#' @param U Cut off for the upper tail.
+#' @param df Degrees of freedom.
+#' @param xlim Limits for the plot.
+#' @param col Color of the shading.
+#' @param axes Whether to plot an x-axis.
+#' @param \dots Currently ignored.
+#' @return Nothing is returned from the function.
+#' @author David Diez
+#' @seealso \code{\link{normTail}}
+#' @examples
+#' 
+#' data(COL)
+#' ChiSquareTail(11.7,
+#'               7,
+#'               c(0, 25),
+#'               col = COL[1])
+#' 
 ChiSquareTail <- function(U,
                           df,
                           xlim = c(0, 10),

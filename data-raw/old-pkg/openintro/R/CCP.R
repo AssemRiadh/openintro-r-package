@@ -1,3 +1,50 @@
+#' Plot a Cartesian Coordinate Plane
+#' 
+#' Create a Cartesian Coordinate Plane.
+#' 
+#' 
+#' @param xlim The x-limits for the plane (vector of length 2).
+#' @param ylim The y-limits for the plane (vector of length 2).
+#' @param mar Plotting margins.
+#' @param length The \code{length} argument is passed to the
+#' \code{\link[graphics]{arrows}} function and is used to control the size of
+#' the arrow.
+#' @param tcl Tick size.
+#' @param xylab Whether x and y should be shown next to the labels.
+#' @param ticks How frequently tick marks should be shown on the axes. If a
+#' vector of length 2, the first argument will correspond to the x-axis and the
+#' second to the y-axis.
+#' @param ticklabs How frequently tick labels should be shown on the axes. If a
+#' vector of length 2, the first argument will correspond to the x-axis and the
+#' second to the y-axis.
+#' @param xpos The position of the labels on the x-axis. See the \code{pos}
+#' argument in the \code{\link[graphics]{text}} function for additional
+#' details.
+#' @param ypos The position of the labels on the y-axis. See the \code{pos}
+#' argument in the \code{\link[graphics]{text}} function for additional
+#' details.
+#' @param cex.coord Inflation factor for font size of the coordinates, where
+#' any value larger than zero is acceptable and \code{1} corresponds to the
+#' default.
+#' @param cex.xylab Inflation factor for font size of the x and y labels, where
+#' any value larger than zero is acceptable and \code{1} corresponds to the
+#' default.
+#' @param add Indicate whether a new plot should be created (\code{FALSE}, the
+#' default) or if the Cartesian Coordinate Plane should be added to the
+#' existing plot.
+#' @author David Diez
+#' @seealso \code{\link{lsegments}}, \code{\link{dlsegments}},
+#' \code{\link{ArrowLines}}
+#' @references OpenIntro, \href{http://www.openintro.org/algeopenintro.org}
+#' @keywords Cartesian Coordinate Plane Plane Algebra
+#' @examples
+#' 
+#' CCP()
+#' 
+#' CCP(xylab=TRUE, ylim=c(-3.5, 2), xpos=3, cex.coord=1)
+#' 
+#' CCP(xlim=c(-8, 8), ylim=c(-10, 6), ticklabs=c(2,2), cex.xylab=0.8)
+#' 
 CCP <-
 function (xlim=c(-4,4), ylim=c(-4,4), mar=rep(0,4), length=0.1, tcl=0.007, xylab=FALSE, ticks=1, ticklabs=1, xpos=1, ypos=2, cex.coord=1, cex.xylab=1.5, add=FALSE) {
   

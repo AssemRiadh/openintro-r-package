@@ -1,3 +1,28 @@
+#' Custom Mosaic Plot
+#' 
+#' Plot a mosaic plot custom built for a particular figure.
+#' 
+#' 
+#' @param formula Formula describing the variable relationship.
+#' @param data Data frame for the variables, optional.
+#' @param col Colors for plotting.
+#' @param border Ignored.
+#' @param dir Ignored.
+#' @param off Fraction of white space between each box in the plot.
+#' @param cex.axis Axis label size.
+#' @param col.dir Direction to lay out colors.
+#' @param flip Whether to flip the ordering of the vertical (\code{"v"}) and/or
+#' horizontal (\code{"h"}) ordering in the plot.
+#' @param \dots Ignored.
+#' @author David Diez (david@@openintro.org)
+#' @examples
+#' 
+#' data(email)
+#' data(COL)
+#' email$spam <- ifelse(email$spam == 0, "not\nspam", "spam")
+#' par(las = 1)
+#' MosaicPlot(number ~ spam, email, col = COL[1:3], off = 0.02)
+#' 
 MosaicPlot <- function(
     formula,
     data,
