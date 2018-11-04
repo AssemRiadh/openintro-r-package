@@ -16,8 +16,8 @@ Authors@R: c(
     )
 License: GPL-3
 Encoding: UTF-8
-LazyLoad: yes
-LazyData: yes
+LazyLoad: true
+LazyData: true
 URL: http://www.openintro.org/
 BugReports: https://github.com/OpenIntroStat/openintro-r-package/issues
 ByteCompile: true
@@ -28,9 +28,12 @@ Depends:
   utils,
   R (>= 2.10)
 Suggests:
+  broom,
   dplyr,
   forcats,
   lubridate,
   ggplot2,
+  tibble,
   tidyr
-RoxygenNote: 6.0.1.9000
+RoxygenNote: 6.1.0
+Roxygen: list(markdown = TRUE)
