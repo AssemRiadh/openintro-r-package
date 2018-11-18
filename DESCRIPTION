@@ -35,6 +35,7 @@ Suggests:
   ggplot2 (>= 2.2.1),
   tibble,
   tidyr,
-  tm
+  tm,
+  wordcloud
 RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
