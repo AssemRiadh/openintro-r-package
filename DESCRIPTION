@@ -32,8 +32,9 @@ Suggests:
   dplyr,
   forcats,
   lubridate,
-  ggplot2,
+  ggplot2 (>= 2.2.1),
   tibble,
-  tidyr
-RoxygenNote: 6.1.0
+  tidyr,
+  tm
+RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
