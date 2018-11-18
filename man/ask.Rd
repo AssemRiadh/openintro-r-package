@@ -3,7 +3,6 @@
 \docType{data}
 \name{ask}
 \alias{ask}
-\alias{assortive_mating}
 \title{How important is it to ask pointed questions?}
 \format{A tibble with 219 observations on the following 3 variables.
 \describe{
@@ -19,13 +18,13 @@ Minson JA, Ruedy NE, Schweitzer ME. There \emph{is} such a thing as
 a stupid question: Question disclosure in strategic communication.
 }
 \usage{
-assortive_mating
+ask
 }
 \description{
-In this experiment, each individual was asked to be a seller of an iPod (a
+Something is wrong with this data set. In this experiment, each individual was asked to be a seller of an iPod (a
 product commonly used to store music on before smart phones...).  They
 participant received $10 + 5\% of the sale price for participating.  The
-iPod they were selling had frozen twice in the past inexplicitly but
+iPod they were selling had frozen twice in the past inexplicably but
 otherwise worked fine. The prospective buyer starts off and then asks one of
 three final questions, depending on the seller's treatment group.
 }

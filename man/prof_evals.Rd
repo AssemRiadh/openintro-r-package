@@ -49,7 +49,7 @@ indicator.} \item{blkandwhite}{Black and white.}
 \item{btystdaveneg}{Beauty standard average negative.} }}
 \source{
 Hamermesh DS, Parker A. 2005. "Beauty in the classroom: Instructors
-pulchritude and putative pedagogical productivity".  Economics of Education
+pulchritude and putative pedagogical productivity". Economics of Education
 Review 24.4:369-376.
 }
 \usage{

@@ -4,7 +4,7 @@
 \name{hsb2}
 \alias{hsb2}
 \title{High School and Beyond survey}
-\format{A tibble with 200 observations and 11 variables.  \describe{
+\format{A tibble with 200 observations and 11 variables. \describe{
 \item{id}{Student ID.} \item{gender}{Student's gender, with
 levels \code{female} and \code{male}.} \item{race}{Student's race,
 with levels \code{african american}, \code{asian}, \code{hispanic}, and

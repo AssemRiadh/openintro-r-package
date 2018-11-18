@@ -6,8 +6,10 @@
 \alias{major.survey}
 \title{Survey of Duke students and the area of their major}
 \format{A tibble with 218 observations on the following 2 variables.
-\describe{\item{gpa}{Grade point average (GPA).}
-\item{major}{Area of academic major.} }}
+\describe{
+\item{gpa}{Grade point average (GPA).}
+\item{major}{Area of academic major.}
+}}
 \usage{
 major_survey
 }

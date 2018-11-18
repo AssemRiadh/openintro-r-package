@@ -1,0 +1,91 @@
+#' Wii Mario Kart auctions from Ebay
+#'
+#' Auction data from Ebay for the game Mario Kart for the Nintendo Wii. This
+#' data was collected in early October, 2009.
+#'
+#' There are several interesting features in the data. First off, note that
+#' there are two outliers in the data. These serve as a nice example of what
+#' one should do when encountering an outlier: examine the data point and
+#' remove it only if there is a good reason. In these two cases, we can see
+#' from the auction titles that they included other items in their auctions
+#' besides the game, which justifies removing them from the data set.
+#'
+#' This data set includes all auctions for a full week in October, 2009.
+#' Auctions were included in the data set if they satisfied a number of
+#' conditions. (1) They were included in a search for "wii mario kart" on
+#' ebay.com, (2) items were in the Video Games > Games > Nintendo Wii section
+#' of Ebay, (3) the listing was an auction and not exclusively a "Buy it Now"
+#' listing (sellers sometimes offer an optional higher price for a buyer to end
+#' bidding and win the auction immediately, which is an \emph{optional} Buy it
+#' Now auction), (4) the item listed was the actual game, (5) the item was
+#' being sold from the US, (6) the item had at least one bidder, (7) there were
+#' no other items included in the auction with the exception of racing wheels,
+#' either generic or brand-name being acceptable, and (8) the auction did not
+#' end with a Buy It Now option.
+#'
+#' @name mariokart
+#' @docType data
+#' @format A tibble with 143 observations on the following 12 variables.
+#' All prices are in US dollars.
+#' \describe{
+#'   \item{id}{Auction ID assigned by Ebay.}
+#'   \item{duration}{Auction length, in days.}
+#'   \item{n_bids}{Number of bids.}
+#'   \item{cond}{Game condition, either \code{new} or \code{used}.}
+#'   \item{start_pr}{Start price of the auction.}
+#'   \item{ship_pr}{Shipping price.}
+#'   \item{total_pr}{Total price, which equals the auction price plus the
+#'   shipping price.}
+#'   \item{ship_sp}{Shipping speed or method.}
+#'   \item{seller_rate}{The seller's rating on Ebay. This is the number
+#'   of positive ratings minus the number of negative ratings for the seller.}
+#'   \item{stock_photo}{Whether the auction feature photo was a stock
+#'   photo or not. If the picture was used in many auctions, then it was called a
+#'   stock photo.}
+#'   \item{wheels}{Number of Wii wheels included in the auction. These are steering
+#'   wheel attachments to make it seem as though you are actually driving in the
+#'   game. When used with the controller, turning the wheel actually causes the
+#'   character on screen to turn.}
+#'   \item{title}{The title of the auctions.}
+#' }
+#' @references \url{http://www.ebay.com/}
+#'
+#' \url{http://www.openintro.org/}
+#' @keywords datasets
+#' @examples
+#'
+#' #===> Identify the outliers <===#
+#' boxPlot(mariokart$total_pr, mariokart$cond, horiz=TRUE)
+#' toss <- which(mariokart$total_pr > 80)
+#' lines(rep(mariokart$total_pr[toss[1]], 2), c(2.4, 2))
+#' text(mariokart$total_pr[toss[1]]-55, 2.4, mariokart$title[toss[1]],
+#' 	pos=3, cex=0.5)
+#' lines(rep(mariokart$total_pr[toss[2]], 2), c(1.6, 2))
+#' text(mariokart$total_pr[toss[2]], 1.6, mariokart$title[toss[2]],
+#' 	pos=1, cex=0.5)
+#' mariokart[toss, ]
+#' # the other two points marked on the boxplot are legitimate auctions
+#'
+#' #===> Replot without the outliers <===#
+#' boxPlot(mariokart$total_pr[-toss], mariokart$cond[-toss], horiz=TRUE)
+#'
+#' #===> Fit a Multiple Regression Model <===#
+#' mk <- mariokart[-toss,]
+#' summary(lm(total_pr ~ cond + stock_photo + duration + wheels, mk))
+#' summary(lm(total_pr ~ cond + stock_photo + wheels, mk))
+#' summary(fit <- lm(total_pr ~ cond + wheels, mk))
+#'
+#' #===> Fit Diagnostics <===#
+#' e <- fit$res
+#' f <- fit$fit
+#' par(mfrow=c(2,3), mar=c(4, 4, 2, 1))
+#' qqnorm(e, ylab="Residuals", main="")
+#' plot(e, xlab="Order of collection", ylab="Residuals")
+#' plot(f, e, xlab="Fitted values", ylab="Residuals")
+#' plot(f, (abs(e)), xlab="Fitted values",
+#'      ylab="Absolute value of residuals")
+#' boxPlot(e, mk$cond, xlab="Condition", ylab="Residuals")
+#' plot(mk$wheels, e, xlab="Number of wheels", ylab="Residuals",
+#'      main="Notice curvature")
+#'
+"mariokart"

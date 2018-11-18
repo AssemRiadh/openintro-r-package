@@ -371,10 +371,8 @@
 
 #' cars
 #'
-#' A tibble with 54 rows and 6 columns. The columns represent the variables
-#' \code{type}, \code{price}, \code{mpgCity}, \code{driveTrain},
-#' \code{passengers}, \code{weight} for a sample of 54 cars from 1993. This
-#' data is a subset of the \code{Cars93} data set from the \code{MASS} package.
+#' A tibble with 54 rows and 6 columns. This data is a subset of the \code{Cars93}
+#' data set from the \code{MASS} package.
 #'
 #' These cars represent a random sample for 1993 models that were in both
 #' \emph{Consumer Reports} and \emph{PACE Buying Guide}. Only vehicles of type
@@ -2041,7 +2039,7 @@
 #' str(gradestv)
 #'
 #' plot(gradestv)
-#' makeTube(gradestv$TV, gradestv$Grades, 1.5, type='robust', homosk=FALSE)
+#' makeTube(gradestv$tv, gradestv$grades, 1.5, type='robust', homosk=FALSE)
 #'
 #' lmPlot(gradestv$TV, gradestv$Grades, xAxis=4, xlab='time watching TV',
 #' 	yR=0.2, highlight=c(1,15,20))

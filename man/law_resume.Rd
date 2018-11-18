@@ -17,8 +17,8 @@ For a casual overview, see
 \url{https://hbr.org/2016/12/research-how-subtle-class-cues-can-backfire-on-your-resume}.
 
 For the academic paper, see Tilcsik A, Rivera LA. 2016. Class Advantage,
-Commitment Penalty.  The Gendered Effect of Social Class Signals in an Elite
-Labor Market.  American Sociological Review 81:6 p1097-1131.
+Commitment Penalty. The Gendered Effect of Social Class Signals in an Elite
+Labor Market. American Sociological Review 81:6 p1097-1131.
 \url{http://journals.sagepub.com/doi/abs/10.1177/0003122416668154}.
 }
 \usage{
@@ -26,7 +26,7 @@ law_resume
 }
 \description{
 Resumes were sent out to 316 top law firms in the United States, and there
-were two randomized characteristics of each resume.  First, the gender
+were two randomized characteristics of each resume. First, the gender
 associated with the resume was randomized by assigning a first name of
 either James or Julia. Second, the socioeconomic class of the candidate was
 randomly assigned and represented through five minor changes associated with
